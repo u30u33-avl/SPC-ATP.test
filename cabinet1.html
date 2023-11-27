@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATP Testing</title>
+    <link rel="stylesheet" href="styles01.css">
+
+    <!-- UniIcon CDN Link  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style>
+        /* Styling for the modal */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Styling for the modal content */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+            color: #086bc1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="head">
+            <p style="color: rgb(8, 15, 10); font-size: 30px;" class="head_1"> Failure Emulation Cabinet </p>
+        </div>
+
+        <ul>
+            <li>
+                <i class="icon uil uil-caret-right"></i>
+                <div class="progress one">
+                    <p id="popupTrigger">1</p>
+                    <i class="uil uil-check"></i>
+                </div>
+                <p style="color: blue; font-size: 18px;" id="popupTriggerStartATP"> Start ATP </p>
+            </li>
+
+            <!-- The Modal for Step 1 (Start ATP) -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span id="popupClose" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Start ATP</h2>
+                    <p><a href="./doc1.html">Access</a></p>
+                    <p><a href="./doc2.html">Request Material</a></p>
+                </div>
+            </div>
+
+            <div id="myModalStartATP" class="modal">
+                <div class="modal-content">
+                    <span id="popupCloseStartATP" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Start ATP</h2>
+                    <p><a href="./doc1.html">Access</a></p>
+                    <p><a href="./doc2.html">Request Material</a></p>
+                </div>
+            </div>
+
+            <!-- JavaScript code for Step 1's popup -->
+            <script>
+                var modal = document.getElementById("myModal");
+                var trigger = document.getElementById("popupTrigger");
+                var modalStartATP = document.getElementById("myModalStartATP");
+                var triggerStartATP = document.getElementById("popupTriggerStartATP");
+
+                var closeButton = document.getElementById("popupClose");
+                var closeButtonStartATP = document.getElementById("popupCloseStartATP");
+
+                trigger.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                closeButton.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                triggerStartATP.onclick = function () {
+                    modalStartATP.style.display = "block";
+                }
+
+                closeButtonStartATP.onclick = function () {
+                    modalStartATP.style.display = "none";
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                    if (event.target == modalStartATP) {
+                        modalStartATP.style.display = "none";
+                    }
+                }
+            </script>
+
+            <!-- ... (previous code) ... -->
+
+            <li>
+                <i class="icon uil uil-bright"></i>
+                <div class="progress two">
+                    <p id="popupTrigger2">2</p>
+                    <i class="uil uil-check"></i>
+                </div>
+                <p style="color: blue; font-size: 18px;" id="popupTriggertroub">Troubleshooting</p>
+            </li>
+
+            <!-- The Modal for Step 2 (Troubleshooting) -->
+            <div id="myModal2" class="modal">
+                <div class="modal-content">
+                    <span id="popupClose2" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Troubleshooting</h2>
+                    <p><a href="./doc2.html">Document</a></p>
+                </div>
+            </div>
+
+            <div id="myModaltroub" class="modal">
+                <div class="modal-content">
+                    <span id="popupClosetroub" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Troubleshooting</h2>
+                    <p><a href="./doc2.html">Document</a></p>
+                </div>
+            </div>
+
+            <script>
+                var modal2 = document.getElementById("myModal2");
+                var trigger2 = document.getElementById("popupTrigger2");
+                var modaltroub = document.getElementById("myModaltroub");
+                var triggertroub = document.getElementById("popupTriggertroub");
+
+                var closeButton2 = document.getElementById("popupClose2");
+                var closeButtontroub = document.getElementById("popupClosetroub");
+
+                trigger2.onclick = function () {
+                    modal2.style.display = "block";
+                }
+
+                closeButton2.onclick = function () {
+                    modal2.style.display = "none";
+                }
+
+                triggertroub.onclick = function () {
+                    modaltroub.style.display = "block";
+                }
+
+                closeButtontroub.onclick = function () {
+                    modaltroub.style.display = "none";
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == modal2) {
+                        modal2.style.display = "none";
+                    }
+                    if (event.target == modaltroub) {
+                        modaltroub.style.display = "none";
+                    }
+                }
+            </script>
+
+            <!-- ... (continue with other steps) ... -->
+            <li>
+                <i class="icon uil uil-clipboard-notes"></i>
+                <div class="progress two">
+                    <p id="popupTrigger3">3</p>
+                    <i class="uil uil-check"></i>
+                </div>
+                <p style="color: blue; font-size: 18px;" id="popupTriggerfinish">ATP is finished</p>
+            </li>
+
+
+
+            <!-- The Modal for Step 3 (ATP is finished) -->
+            <div id="myModal3" class="modal">
+                <div class="modal-content">
+                    <span id="popupClose3" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>ATP is finished</h2>
+                    <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/html5.dashboard"target="_blank">Record hours-RPS:</a>
+                    <a href="Dokumentation_manuell_Zeiterfassung_manuelle_Lagerzugangsbuchung.docx" target="_blank">Guidelines</a></p>   
+                    <p>Close the production task </p>
+                    <p>Collect all the tools 
+                        clean up the commissioning area
+                        bring back the box</p>
+                    
+                </div>
+            </div>
+
+            <div id="myModalfinish" class="modal">
+                <div class="modal-content">
+                    <span id="popupClosefinish" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>ATP is finished</h2>
+                    <p><a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/html5.dashboard"target="_blank">Record hours-RPS:</a>
+                    <a href="Dokumentation_manuell_Zeiterfassung_manuelle_Lagerzugangsbuchung.docx" target="_blank">Guidelines</a></p>   
+                    <p>Close the production task </p>
+                    <p>Collect all the tools 
+                        clean up the commissioning area
+                        bring back the box</p>
+                </div>
+            </div>
+
+            
+            
+            <script>
+                // JavaScript code for Step 3's popup
+                var modal3 = document.getElementById("myModal3");
+                var trigger3 = document.getElementById("popupTrigger3");
+                var modalfinish = document.getElementById("myModalfinish");
+                var triggerfinish = document.getElementById("popupTriggerfinish");
+
+                var closeButton3 = document.getElementById("popupClose3");
+                var closeButtonfinish = document.getElementById("popupClosefinish");
+
+                trigger3.onclick = function () {
+                    modal3.style.display = "block";
+                }
+
+                closeButton3.onclick = function () {
+                    modal3.style.display = "none";
+                }
+
+                triggerfinish.onclick = function () {
+                    modalfinish.style.display = "block";
+                }
+
+                closeButtonfinish.onclick = function () {
+                    modalfinish.style.display = "none";
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == modal4) {
+                        modal4.style.display = "none";
+                    }
+                    if (event.target == modalfinish) {
+                        modalfinish.style.display = "none";
+                    }
+                }
+            </script>
+            
+
+
+
+            <li>
+                <i class="icon uil uil-bolt"></i>
+                <div class="progress four">
+                    <p id="popupTrigger4">4</p>
+                    <i class="uil uil-check"></i>
+                </div>
+                <p style="color: blue; font-size: 18px;" id="popupTriggerbackup">Back-up files</p>
+            </li>
+
+            <div id="myModal4" class="modal">
+                <div class="modal-content">
+                    <span id="popupClose4" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Back-up files</h2>
+                    <p>Create a new folder and copy all the back up files ( Gain calibration document,  Finished ATR, Files from File zilla) </p>
+                    <a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/manufacturing.manufacturingorder">Uplaod ATR</a>
+                </div>
+            </div>
+
+            <div id="myModalbackup" class="modal">
+                <div class="modal-content">
+                    <span id="popupClosebackup" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Back-up files</h2>
+                    <p>Create a new folder and copy all the back up files ( Gain calibration document,  Finished ATR, Files from File zilla) </p>
+                    <a href="https://dewansw1012.avl01.avlcorp.lan/RPSNext/app/SP/manufacturing.manufacturingorder">Uplaod ATR</a>
+                </div>
+            </div>
+
+            <script>
+                var modal4 = document.getElementById("myModal4");
+                var trigger4 = document.getElementById("popupTrigger4");
+                var modalbackup = document.getElementById("myModalbackup");
+                var triggerbackup = document.getElementById("popupTriggerbackup");
+
+                var closeButton4 = document.getElementById("popupClose4");
+                var closeButtonbackup = document.getElementById("popupClosebackup");
+
+                trigger4.onclick = function () {
+                    modal4.style.display = "block";
+                }
+
+                closeButton4.onclick = function () {
+                    modal4.style.display = "none";
+                }
+
+                triggerbackup.onclick = function () {
+                    modalbackup.style.display = "block";
+                }
+
+                closeButtonbackup.onclick = function () {
+                    modalbackup.style.display = "none";
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == modal4) {
+                        modal4.style.display = "none";
+                    }
+                    if (event.target == modalbackup) {
+                        modalbackup.style.display = "none";
+                    }
+                }
+            </script>
+
+            <!-- ... (continue with other steps) ... -->
+
+            <li>
+                <i class="icon uil uil-book-reader"></i>
+                <div class="progress five">
+                    <p id="popupTrigger5">5</p>
+                    <i class="uil uil-check"></i>
+                </div>
+                <p style="color: blue; font-size: 18px;" id="popupTriggerpost">Post Processing</p>
+            </li>
+
+            <div id="myModal5" class="modal">
+                <div class="modal-content">
+                    <span id="popupClose5" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Post Processing</h2>
+                    <p><a href="mailto:Robert.Graf@avl.com" target="_blank">Report manufactury failures</a></p>
+                    <p><a href="mailto:Philipp.Dorbath@avl.com" target="_blank">Report ATP document error</a><p></p>
+                    <p><a href="https://jira.avl.com/its/secure/WelcomeToJIRA.jspa" target="_blank">Create a jira ticket</a></p>
+                    <p><a href="mailto:Philipp.Dorbath@avl.com" target="_blank">Share knowledge with team</a><p></p>
+                    <p>Share knowledge to on-site team</p>
+                </div>
+            </div>
+
+            <div id="myModalpost" class="modal">
+                <div class="modal-content">
+                    <span id="popupClosepost" style="float: right; cursor: pointer;">&times;</span>
+                    <h2>Post Processing</h2>
+                    <p><a href="mailto:Robert.Graf@avl.com" target="_blank">Report manufactury failures</a></p>
+                    <p><a href="mailto:Philipp.Dorbath@avl.com" target="_blank">Report ATP document error</a><p></p>
+                    <p><a href="https://jira.avl.com/its/secure/WelcomeToJIRA.jspa" target="_blank">Create a jira ticket</a></p>
+                    <p><a href="mailto:Philipp.Dorbath@avl.com" target="_blank">Share knowledge with team</a><p></p>
+                    <p>Share knowledge to on-site team</p>
+                </div>
+            </div>
+
+            <script>
+                var modal5 = document.getElementById("myModal5");
+                var trigger5 = document.getElementById("popupTrigger5");
+                var modalpost = document.getElementById("myModalpost");
+                var triggerpost = document.getElementById("popupTriggerpost");
+
+                var closeButton5 = document.getElementById("popupClose5");
+                var closeButtonpost = document.getElementById("popupClosepost");
+
+                trigger5.onclick = function () {
+                    modal5.style.display = "block";
+                }
+
+                closeButton5.onclick = function () {
+                    modal5.style.display = "none";
+                }
+
+                triggerpost.onclick = function () {
+                    modalpost.style.display = "block";
+                }
+
+                closeButtonpost.onclick = function () {
+                    modalpost.style.display = "none";
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == modal5) {
+                        modal5.style.display = "none";
+                    }
+                    if (event.target == modalpost) {
+                        modalpost.style.display = "none";
+                    }
+                }
+            </script>
+        </ul>
+
+    </div>
+
+    <script src="main.js"></script>
+
+    <a href="#" class="back-button">
+        <button onclick="goBack()"> Back</button></a>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
